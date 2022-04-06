@@ -128,9 +128,7 @@ if %num% == 5 (
 	pause > nul
 	set /a perdeu=%perdeu% +1
 	goto:jokenpo
-		)
-
-
+		)		
 
 rem (PAPEL)
 :papel
@@ -193,8 +191,6 @@ if %num% == 5 (
 	goto:jokenpo
 		)
 
-
-
 rem (TESOURA)
 :tesoura
 if %num% == 1 (
@@ -256,9 +252,6 @@ if %num% == 5 (
 	goto:jokenpo
 		)
 
-
-
-
 rem (LAGARTO)
 :lagarto
 if %num% == 1 (
@@ -319,8 +312,6 @@ if %num% == 5 (
 	set /a ganhou=%ganhou% +1
 	goto:jokenpo
 		)
-
-
 
 REM (SPOCK)
 :spock
@@ -389,7 +380,6 @@ set /p resp=Deseja sair do jogo? [S/N]:
 if /i %resp% == s (exit) else (goto:jokenpo)
 
 
-
 color 3F
 :regra
 mode 85,20
@@ -416,4 +406,3 @@ echo ---------------------------------------------------------------------------
 echo.
 set/p op=Pressione a tecla R para continuar...
 if /i %op% == r (goto:jokenpo) else (goto:regra) 
-	

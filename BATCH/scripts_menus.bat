@@ -4,7 +4,6 @@ title ATIVIDADE 01
 mode 27,20
 color f0
 cls
-
 rem comentario 
 :menu
 mode 30,30
@@ -59,8 +58,6 @@ echo.
 set /p resp=Deseja realmente sair? [S/N]:
 if /i %resp% == s (exit) else (goto:menu)
 
-
-
 color f0
 :office
 cls
@@ -114,7 +111,6 @@ goto office
 :menuprincipal
 goto menu
 
-
 color f0
 :servicos
 cls
@@ -166,7 +162,6 @@ goto servicos
 
 :menuprincipal
 goto menu
-
 
 color f0
 :apps

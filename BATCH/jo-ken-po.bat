@@ -11,8 +11,6 @@ echo ----------------------------------------
 echo.
 set /p nome=Digite seu Nome:
 	(goto:jokenpo)
-
-
 rem ::::::::::::::::::jogo:::::::::::::::::::
 color 3F
 
@@ -23,9 +21,7 @@ set /a empate=0
 :jokenpo
 mode 37,35
 cls
-
 set /a num=(%random% %%5) + 1
-
 echo.
 echo                 ___              
 echo                //\\\            
@@ -130,8 +126,6 @@ if %num% == 5 (
 	goto:jokenpo
 		)
 
-
-
 rem (PAPEL)
 :papel
 if %num% == 1 (
@@ -192,8 +186,6 @@ if %num% == 5 (
 	set /a ganhou=%ganhou% +1
 	goto:jokenpo
 		)
-
-
 
 rem (TESOURA)
 :tesoura
@@ -256,9 +248,6 @@ if %num% == 5 (
 	goto:jokenpo
 		)
 
-
-
-
 rem (LAGARTO)
 :lagarto
 if %num% == 1 (
@@ -320,8 +309,6 @@ if %num% == 5 (
 	goto:jokenpo
 		)
 
-
-
 REM (SPOCK)
 :spock
 if %num% == 1 (
@@ -382,13 +369,10 @@ if %num% == 5 (
 	set /a empate=%empate% +1
 	goto:jokenpo
 		)
-
 :sair
 echo.
 set /p resp=Deseja sair do jogo? [S/N]:
 if /i %resp% == s (exit) else (goto:jokenpo)
-
-
 
 color 3F
 :regra
@@ -400,20 +384,15 @@ echo     			    REGRAS DO JOGO
 echo -------------------------------------------------------------------------------------
 echo PEDRA:
 echo		Empata com Pedra; Ganha de Tesoura e Lagarto; Perde de Papel e Spock;
-
 echo PAPEL:
 echo 	Empata com Papel; Ganha de Pedra e Spock; Perde de Tesoura e Lagarto;
-
 echo TESOURA:
 echo 	Empata com Tesoura; Ganha de Lagarto e Papel; Perde de Pedra e Spock;
-
 echo LAGARTO:
 echo 	Empata com Lagarto; Ganha de Papel e Spock; Perde de Pedra e Tesoura;
-
 echo SPOCK:
 echo 	Empata com Spock; Ganha de de Pedra e Tesoura; Perde de Lagarto e Papel;	
 echo -------------------------------------------------------------------------------------
 echo.
 set/p op=Pressione a tecla R para continuar...
 if /i %op% == r (goto:jokenpo) else (goto:regra) 
-	
